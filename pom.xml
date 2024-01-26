@@ -109,10 +109,11 @@
 			<plugin>
 				<groupId>org.graalvm.buildtools</groupId>
 				<artifactId>native-maven-plugin</artifactId>
-				<extensions>true</extensions>
 				<configuration>
 					<buildArgs>
 						<buildArg>--strict-image-heap</buildArg>
+						<buildArg>--initialize-at-build-time=oracle.sql.converter.I18CharacterConvertersWrapper</buildArg>
+						<buildArg>--initialize-at-build-time=oracle.i18n.text.converter.CharacterConverter1Byte</buildArg>
 					</buildArgs>
 				</configuration>
 			</plugin>
